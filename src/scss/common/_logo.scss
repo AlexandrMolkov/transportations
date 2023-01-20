@@ -17,11 +17,20 @@
     &__image-main{
         width: 39px;
         height: 46px;
+
+        @media (max-width: 920px){
+            width: 29px;
+            height: 36px;
+        }
     }
     &__image-text{
         padding-left: 10px;
         width: 120px;
         height: 21px;
+
+        @media (max-width: 920px){
+            width: 100px;
+        }
     }
 
     a{
@@ -64,7 +73,10 @@
 
 .logo.header__logo {
 
-    
+    margin-right: 30px;
+
+
+
     &::before {
         content: "";
         position: absolute;
@@ -73,11 +85,21 @@
         height: 46px;
         width: 1px;
         background-color: #ffff;
+
+        @media (max-width: 920px){
+            height: 36px;
+        }
+    }
+
+    @media (max-width: 920px){
+        margin-right: 20px;
     }
 
     @media (max-width:$laptop){
         width: 173px;
     }
+
+
 }
 
 .logo__image-desktop {

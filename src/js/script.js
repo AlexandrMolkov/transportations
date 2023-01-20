@@ -1,7 +1,5 @@
 import './common/webp.js'
 import './common/burger.js'
-//import './common/comparison.js'
 import './common/lazyLoad.js'
-//import './common/form.js'
 //import './common/yamap.js'
 import './common/main.js'

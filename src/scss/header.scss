@@ -11,6 +11,11 @@
         display: flex;
         font-size: rem(12);
         line-height: rem(14);
+
+        @media (max-width: $mobileM){
+            font-size: rem(10);
+            line-height: rem(12);
+        }
     }
     &__bottom{
         padding: 27px 0px;
@@ -20,13 +25,18 @@
     &__languages{
         display: flex;
         gap: 10px;
-
-        
     }
 
     &__language {
         color: #fff;
         opacity: .5;
+
+        
+
+        @media (max-width: $mobileM){
+            font-size: rem(10);
+            line-height: rem(12);
+        }
 
         &-current{
             opacity: 1
@@ -42,11 +52,9 @@
     }
 
     @media (max-width: $laptop){
-        padding-top: 11px;
     }
 
     @media (max-width: $laptop){
-        min-height: 66px;
         z-index: 1;
     }
     &__content-row{
@@ -60,18 +68,6 @@
         align-items: center;
 
         height: 100%;
-
-        @media (max-width: $laptop){
-
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            
-            > * {
-                grid-column: span 1;
-            
-            }
-
-        }
     }
 
     .burg {
@@ -93,12 +89,17 @@
         padding-left: 10px;
         font-size: rem(14);
         line-height: rem(16);
+        
+        @media (max-width: 920px){
+            font-size: rem(12);
+        }
+
+        @media (max-width: $mobileM){
+            display: none;
+        }
     }
 }
 
-.header__logo{
-    margin-right: 30px;
-}
 
 .header__nav{
     z-index: 10;
@@ -108,7 +109,6 @@
     
 
         @media (max-width: $desktop){
-            color: $fontBlack;
         }
 
         @media (max-width: $laptop) {
@@ -143,6 +143,7 @@
             text-transform: uppercase;
 
             @media (max-width: 920px){
+                font-size: rem(12);
             }
 
             @media (max-width: $laptop){

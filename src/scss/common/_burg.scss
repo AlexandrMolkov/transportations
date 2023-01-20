@@ -1,5 +1,5 @@
 .burg{
-    $color: $fontBlack;
+    $color: #fff;
     $openColor: #fff;
 
     display: none;
@@ -16,7 +16,7 @@
         cursor: pointer;
     }
 
-    @media (max-width: 767px){
+    @media (max-width: $laptop){
         display: flex;
         align-items: center;
         margin-right: 0px;
@@ -69,61 +69,6 @@
               }
         }
       }
-
-
-/*     span{
-        width: 24px;
-        height: 2px;
-        background-color: $color;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -1px);
-        transition: all 0.1s;
-    }
-
-
-
-    &::before,
-    &::after{
-        content: "";
-        position: absolute;
-        width: 26px;
-        height: 2px;
-        background-color: $color;
-
-        transition: all 0.2s;
-    }
-    &::before{
-        top: 4px;
-    }
-    &::after{
-        bottom: 4px;
-    }
-
-    &.open{
-        
-        & span{
-            transform: translate(110%, -1px);
-            background-color: $openColor;
-        }
-
-        &::before,&::after{
-            background-color: $openColor;
-        }
-
-        &::before{
-            transform-origin: 0%;
-            transform: rotate(45deg);
-            left: 15%;
-            top: 4px;
-        }
-        &::after{
-            bottom: 2px;
-            left: 15%;
-            transform-origin: 0% 100%;
-            transform: rotate(-45deg);
-        }
-    } */
 
 }
 .nav-burg{

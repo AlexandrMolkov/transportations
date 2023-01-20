@@ -33,12 +33,11 @@ body {
     transition: .2s;
 
     &:hover, &:focus {
-        outline: 0;
-        box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.45);
-        transform: rotate(-3deg) scale(1.1);
+        opacity: .7;
     }
     &:active{
         color: rgba(#fff, .3);
+        opacity: .3;
     }
 
     &.w-100{
@@ -63,9 +62,16 @@ body {
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
+
+
     @media (max-width: $laptop){
         font-size: rem(36);
     }
+
+    @media (max-width: $mobileL){
+        font-size: rem(32);
+    }
+
 
     &-before{
         position: relative;
@@ -82,3 +88,7 @@ body {
 }
 
 #slider {flex-grow: 1;}
+
+*:focus {
+    outline: 1px solid #fff;
+}

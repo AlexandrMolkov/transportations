@@ -1,6 +1,5 @@
 .swiper {
     min-height: 300px;
-    padding: 0 40px;
 
     position: relative;
 }
@@ -16,14 +15,20 @@
 .swiper-button-prev,.swiper-button-next{
     color: $theme;
     display: flex;
-    gap: 40px;
+    //gap: 40px;
+    transition: .3s;
 
     &::after {
         content: "";
     }
+
+    @media (max-width: $laptop){
+        bottom: -80px;
+        top: auto;
+    }
 } 
 .swiper-button-disabled{
-    opacity: 1 !important;
+    //opacity: 0 !important;
 }
 .swiper-button-prev{
     position: absolute;
@@ -31,19 +36,53 @@
     left: auto;
     bottom: -20px;
     top: auto;
+
+    @media (max-width: $laptop){
+        left: 30px;
+    }
+
+    .swiper-button-icon{
+        margin-right: 40px;
+
+        @media (max-width: $laptop){
+            margin-left: 0px;
+        }
+    }
+    
+}
+.swiper-button-prev:hover{
+    right: 60px;
 }
 .swiper-button-next{
     position: absolute;
-    
     right: 40px;
     top: 0;
     bottom: auto;
+
+    @media (max-width: $laptop){
+        right: 0;
+    }
+
+    .swiper-button-icon{
+        margin-left: 40px;
+
+        @media (max-width: $laptop){
+            margin-left: 0px;
+        }
+    }
+}
+.swiper-button-next:hover{
+    right: 30px;
 }
 .swiper-button-text{
     text-transform: uppercase;
     font-size: 1em;
     line-height: rem(25);
     letter-spacing: 0.1em;
+
+    @media (max-width: $laptop){
+        display: none;
+    }
 }
 .swiper-button-icon{
     width: 65px;

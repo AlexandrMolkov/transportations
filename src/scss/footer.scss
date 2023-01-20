@@ -32,9 +32,7 @@ body {
     align-items: center;
 
     @media (max-width: $laptop){
-        padding-top: 0;
-        padding-bottom: 0;
-        min-height:auto;
+
     }
 
     &__content{
@@ -67,6 +65,15 @@ body {
 
         &_between{
             justify-content: space-between;
+
+            @media (max-width: $laptop){
+                justify-content: flex-start;
+                 gap: 38px;
+            }
+        }
+
+        @media (max-width: $mobileL){
+            font-size: rem(12);
         }
     }
 
@@ -93,5 +100,6 @@ body {
     
     &__autor{
         text-decoration-line: underline;
+        
     }
 }
