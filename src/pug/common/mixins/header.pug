@@ -1,0 +1,27 @@
+include _burg
+include _nav
+
+mixin header(navContent, navClass)
+    -var navClasses = "header__nav " + navClass
+    header.header
+        .header__content
+            .header__top
+                .container.header__content-row
+                    .header__top-item.header__languages
+                        button.header__language.header__language-current РУС
+                        button.header__language ENG
+                        button.header__language FR
+                    .header__top-item
+                        a.header__number(href="tel:88001234567") 8 (800) 123-45-67
+                    .header__top-item
+                        a.header__email(href="mailto:sales@log.ru") sales@log.ru 
+            .header__bottom
+                .container.header__content-row
+                    a.logo.header__logo(href="index.html" tabindex="-1")
+                        img.logo__image-main(src="img/svg/logo.svg" alt="logo")
+                        img.logo__image-text(src="img/svg/logo-text.svg" alt="logo")
+                    .marker
+                        img.marker__image(src="img/svg/mark.svg" width="25" height="25" alt="mark")
+                        .marker__text Наши офисы
+                    +nav('nav', navContent,'headNav')(class=navClasses)
+                    +burg('#headNav')(class="header-burg")

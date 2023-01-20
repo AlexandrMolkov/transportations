@@ -1,0 +1,118 @@
+.logo{
+
+    transition: opacity .1s;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 30px;
+
+    &:hover{
+        opacity: .8;
+    }
+    &:active{
+        opacity: .6;
+    }
+
+
+    &__image-main{
+        width: 39px;
+        height: 46px;
+    }
+    &__image-text{
+        padding-left: 10px;
+        width: 120px;
+        height: 21px;
+    }
+
+    a{
+        &:focus{
+            outline: 0;
+            opacity: .8;
+        }
+    }
+
+    &__text{
+        align-self: flex-end;
+        font-size: rem(26);
+        text-transform: uppercase;
+        font-family: Oswald;
+
+        @media (max-width: $laptop){
+            padding: 15px;
+        }
+    }
+}
+
+.text-logo{
+    font-size: rem(26);
+    text-transform: uppercase;
+    font-family: Oswald;
+
+    &:hover, &:focus{
+        outline: 0;
+        opacity: .8;
+    }
+    &:active{
+        opacity: .6;
+    }
+
+
+    @media (max-width: $laptop){
+        padding: 15px;
+    }
+}
+
+.logo.header__logo {
+
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 46px;
+        width: 1px;
+        background-color: #ffff;
+    }
+
+    @media (max-width:$laptop){
+        width: 173px;
+    }
+}
+
+.logo__image-desktop {
+    width: 80px;
+    @media (max-width:$laptop){
+        display: none;
+    }
+}
+
+.logo__image-tablet {
+    display: none;
+
+    @media (max-width:$laptop){
+        display: block;
+    }
+
+    @media (max-width: $laptop){
+        display: none;
+    }
+}
+
+.logo__image-mobile,.logo__image-mobile-text {
+    display: none;
+    @media (max-width: $laptop){
+        //display: block;
+    }
+
+    &-text{
+        
+        margin-top: 3px;
+
+    }
+    
+}
+.logo__image-wrapper {
+    display: flex;
+    justify-content: center;
+}

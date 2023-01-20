@@ -1,0 +1,16 @@
+include common/mixins/_nav
+
+footer.footer
+    .footer__content.container
+        .footer__item
+            a.logo.footer__logo(href="index.html" tabindex="-1")
+                img.logo__image-main(src="img/svg/logo-footer.svg" alt="logo")
+                img.logo__image-text(src="img/svg/logo-text.svg" alt="logo")
+            .footer__info
+                address.footer__address 123456, Санкт-Петербург, Невский пр-кт 127
+                a.footer__email(href="mailto:sales@log.ru") sales@log.ru 
+        .footer__item.footer__item_between
+            .footer__info
+                a.footer__number(href="tel:78123445665") +7 (812) 344-56-65
+                a.footer__number(href="tel:78123555665") +7 (812) 355-56-65
+            .footer__autor Разработано - D-E-N.ru

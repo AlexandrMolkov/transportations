@@ -1,0 +1,52 @@
+
+@mixin flex($gap: 16px) {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+
+    > * {
+        flex: 1 1 calc((100% / 3) - ($gap*2));
+        min-height: 100px;
+        background: blue;
+    
+        @media (max-width: 768px){
+            flex: 1 1 calc((100% / 2) - ($gap*2));
+        }
+    }
+}
+
+@mixin grid($gap: 16px) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $gap;
+/*     grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 768px){
+        grid-template-columns: repeat(2, 1fr);
+    } */
+
+    &-item{
+        grid-column: span 4;
+    
+        @media (max-width: 768px){
+            grid-column: span 6;
+        }
+    
+        min-height: 100px;
+        background: red;
+    }
+}
+
+@mixin fixedSize($width, $height) {
+
+    @if ($width) {  
+        max-width: $width;
+        min-width: $width;
+    }
+
+    @if ($height) {  
+        max-height: $height;
+        min-height: $height;
+    }
+    
+}

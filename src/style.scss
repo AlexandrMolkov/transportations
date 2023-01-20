@@ -1,0 +1,20 @@
+@use "sass:math";
+
+@import "scss/common/_null.scss";
+@import "scss/common/_variables.scss";
+@import "scss/common/_visually-hidden.scss";
+@import "scss/common/_fonts.scss";
+@import "scss/common/_mixins.scss";
+@import "scss/common/_functions.scss";
+@import "scss/common/_container.scss";
+@import "scss/common/_burg.scss";
+@import "scss/common/_nav.scss";
+@import "scss/common/_logo.scss";
+@import "scss/libs/swiper.min.scss";
+@import "scss/common/swiper-custom.scss";
+
+@import "scss/main";
+@import "scss/header";
+@import "scss/footer";
+@import "scss/pages/parts/map";
+@import "scss/pages/index";

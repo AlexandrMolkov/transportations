@@ -1,0 +1,124 @@
+.about {
+
+    background-color: $dark;
+    padding-bottom: 120px;
+
+    &__content{
+        position: relative;
+
+        
+    padding-top: 80px;
+        padding-bottom: 80px;
+        $gap: 1px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: $gap;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 408px;
+            height: 100%;
+            background-color: $light;
+            left: 50%;
+            transform: translateX(-50%);  
+        }
+
+        > * {
+            flex: 0 1 calc((100% / 2) - ($gap*2));
+        }
+        
+        @media (max-width: $laptop){
+        
+            > * {
+                flex: 0 1 calc((100% / 1) - ($gap*2));
+            }
+        }
+    }
+    
+    &__title{
+        margin-bottom: 19px;
+        letter-spacing: 0.05em;
+    }
+
+    &__text-block{
+        padding-top: 43px;
+        max-width: 445px;
+        z-index: 1;
+    }
+
+    &__text{
+        font-size: 1em;
+        line-height: rem(23);
+    }
+
+    &__items{
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        
+        > * {
+            grid-column: span 1;
+        }
+        @media (max-width: $mobileL){
+        
+            > * {
+                grid-column: span 3;
+            }
+        }
+    }
+    &__item{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #fff;
+        min-height: 160px;
+        color: #000;
+        position: relative;
+        overflow: hidden;
+        outline: 1px solid $gold;
+        width: 200px;
+        height: 160px;
+    }
+    &__item-title{
+
+        top: -4px;
+    position: relative;
+
+        font-weight: 700;
+        color: $dark;
+        font-size: rem(64);
+        letter-spacing: 0.05em;
+    }
+    &__item-subtitle{
+
+        top: -3px;
+    position: relative;
+
+        font-size: rem(18);
+        line-height: rem(21);
+        letter-spacing: 0.05em;
+
+    }
+    &__item-image{
+        width: 100%;
+        object-fit: cover;
+    }
+    &__item-text{
+
+        top: 7px;
+        position: relative;
+
+        font-size: rem(12);
+        line-height: rem(14);
+    }
+}

@@ -1,0 +1,161 @@
+.header{
+
+
+    &__top, &__bottom{
+        width: 100%;
+    }
+    &__top{
+        padding: 15px 0;
+        color: #fff;
+        background-color: $gold;
+        display: flex;
+        font-size: rem(12);
+        line-height: rem(14);
+    }
+    &__bottom{
+        padding: 27px 0px;
+        background-color: $dark;
+    }
+
+    &__languages{
+        display: flex;
+        gap: 10px;
+
+        
+    }
+
+    &__language {
+        color: #fff;
+        opacity: .5;
+
+        &-current{
+            opacity: 1
+           }
+    }
+
+    .container{
+        overflow: visible;
+    }
+
+    @media (max-width: $desktop){
+        padding-top: 0px;
+    }
+
+    @media (max-width: $laptop){
+        padding-top: 11px;
+    }
+
+    @media (max-width: $laptop){
+        min-height: 66px;
+        z-index: 1;
+    }
+    &__content-row{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 100%;
+
+        @media (max-width: $laptop){
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            > * {
+                grid-column: span 1;
+            
+            }
+
+        }
+    }
+
+    .burg {
+        
+        margin-bottom: -1px;
+    }
+
+}
+.marker {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    &__image{
+
+    }
+    &__text{
+        color: #fff;
+        padding-left: 10px;
+        font-size: rem(14);
+        line-height: rem(16);
+    }
+}
+
+.header__logo{
+    margin-right: 30px;
+}
+
+.header__nav{
+    z-index: 10;
+
+    color: #fff;
+    text-transform: uppercase;
+    
+
+        @media (max-width: $desktop){
+            color: $fontBlack;
+        }
+
+        @media (max-width: $laptop) {
+            overflow: hidden;
+            background-color: $theme;
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: -100%;
+            min-width: 320px;
+            width: 100%;
+            height: 100vh;
+            transition: all 0.3s;
+        }
+        & > ul {
+            gap: 29px;
+
+            @media (max-width: $laptop) {
+                flex-direction: column;
+                min-width: 320px;
+                height: 100%;
+                padding-top: 150px;
+                text-align: center;
+            }
+
+        }
+        
+        .nav__link {
+            font-size: rem(14);
+            line-height: rem(16);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            @media (max-width: 920px){
+            }
+
+            @media (max-width: $laptop){
+                font-size: rem(24);
+                color: #fff;
+            }
+        }
+
+
+}
+.header__nav.show {
+    @media (max-width: $laptop) {
+        left: 0;
+        z-index: 100;
+    }
+}

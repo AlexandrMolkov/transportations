@@ -1,0 +1,137 @@
+.burg{
+    $color: $fontBlack;
+    $openColor: #fff;
+
+    display: none;
+    width: 24px;
+    height: 24px;
+
+    position: relative;
+    z-index: 100;
+    background: transparent;
+
+    margin-left: auto;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    @media (max-width: 767px){
+        display: flex;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    @media (max-width: 320px){
+    }
+
+    &__icon{
+
+            transition-duration: 0.5s;
+            position: absolute;
+            height: 4px;
+            width: 30px;
+            //top: 30px;
+            background-color: $color;
+          
+          &:before {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background-color:$color;
+            content: "";
+            top: -10px;
+          }
+          &:after {
+            transition-duration: 0.5s;
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            background-color:$color;
+            content: "";
+            top: 10px;
+          }
+    }
+
+    &.open {
+        .burg__icon{
+            transition-duration: 0.5s;
+            background: transparent;
+
+            &:before {
+                transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+                background-color: $openColor;
+              }
+              &:after {
+                background-color: $openColor;
+                transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+              }
+        }
+      }
+
+
+/*     span{
+        width: 24px;
+        height: 2px;
+        background-color: $color;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -1px);
+        transition: all 0.1s;
+    }
+
+
+
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 2px;
+        background-color: $color;
+
+        transition: all 0.2s;
+    }
+    &::before{
+        top: 4px;
+    }
+    &::after{
+        bottom: 4px;
+    }
+
+    &.open{
+        
+        & span{
+            transform: translate(110%, -1px);
+            background-color: $openColor;
+        }
+
+        &::before,&::after{
+            background-color: $openColor;
+        }
+
+        &::before{
+            transform-origin: 0%;
+            transform: rotate(45deg);
+            left: 15%;
+            top: 4px;
+        }
+        &::after{
+            bottom: 2px;
+            left: 15%;
+            transform-origin: 0% 100%;
+            transform: rotate(-45deg);
+        }
+    } */
+
+}
+.nav-burg{
+    
+    @media (max-width: 767px) {
+    }
+
+    &.show{
+        display: block;
+    }
+}

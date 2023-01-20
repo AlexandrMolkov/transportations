@@ -1,0 +1,40 @@
+@mixin container($maxWidth: 1108px, $padding: 30px) {
+    max-width: $maxWidth + ($padding * 2);
+    width: 100%;
+    padding: 0 $padding;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        padding: 0 20px;
+    }
+
+/*     @media (max-width: 1440px) {
+        max-width: $maxWidth;
+    }
+
+    @media (max-width: 1200px) {
+        max-width: 994px;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 748px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 405px;
+    }
+
+    @media (max-width: 425px) {
+        max-width: 355px;
+    }
+
+    @media (max-width: 375px) {
+        max-width: 320px;
+    } */
+
+}
+
+.container {
+    @include container()
+}

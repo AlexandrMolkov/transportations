@@ -1,0 +1,12 @@
+mixin nav(className, data, idName)
+    -var classes= className + ' ' + attributes.class
+    nav(class=classes id=idName)
+        ul(class=className + '__ul')
+            each item in data
+                if item.current
+                    -var liClasses= className + '__li ' + className
+                    li(class=liClasses)
+                        a(class=className + '__link ' + className + '__link_current')(href=item.link)= item.content
+                else
+                    li(class=className + '__li')
+                        a(class=className + '__link')(href=item.link)= item.content

@@ -1,0 +1,39 @@
+.hero {
+
+    //background-image: url('../img/trucking.jpg');
+    background: linear-gradient(0deg, rgba(47, 52, 58, 0.75), rgba(47, 52, 58, 0.75)), url('../img/trucking.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: calc(100vh - 144px);
+    position: relative;
+    padding-top: 155px;
+
+    &__content{
+        text-align: center;
+        color: #fff;
+        max-width: 920px;
+        width: 100%;
+        border: 1px solid $gold;
+        padding: 45px 71px;
+
+    }
+    &__title{
+        text-transform: uppercase;
+        font-size: rem(64);
+        line-height: rem(75);
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    &__text{
+        font-size: rem(18);
+        line-height: rem(28.48);
+    }
+
+    &__mouse{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

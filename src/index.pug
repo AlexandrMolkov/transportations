@@ -1,0 +1,23 @@
+include pug/head
+include pug/common/mixins/header
+
+doctype html
+html(lang="ru")
+    +head('Главная')
+    body
+        .wrapper
+            +header([{link:'index.html', content:'услуги', current: true},
+                {link:'#', content:'о компании'},
+                {link:'#', content:'вакансии'},
+                {link:'#', content:'контакты'}])
+                    
+            main.main
+                include pug/pages/index/hero
+                include pug/pages/index/main-slider
+                include pug/pages/index/services
+                include pug/pages/index/about
+                include pug/pages/parts/map
+            include pug/footer
+        script(src="js/app.min.js")
+
+        
