@@ -150,6 +150,17 @@
                 font-size: rem(24);
                 color: #fff;
             }
+
+            &_current {
+                &::before {
+                    @media (max-width: $laptop){
+                        bottom: -14px;
+                        width: 100px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                } 
+            }
         }
 
 

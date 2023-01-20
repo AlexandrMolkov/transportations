@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const checkCenter = () => {
-        const screenCenter =  (window.innerHeight/2) + window.scrollY
+        const screenBottom =  window.innerHeight + window.scrollY
         images.forEach((e) => {
 
-            if(e.getBoundingClientRect().y < screenCenter) {
+            if(e.getBoundingClientRect().y < screenBottom) {
                 loadImg(e)
             }
 

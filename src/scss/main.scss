@@ -2,7 +2,7 @@ body {
     font-family: Roboto, Arial, sans-serif;
     color: #fff;
 
-    &.overflow-hidden{
+    &.lock{
         overflow: hidden;
     }
 }
@@ -91,4 +91,20 @@ body {
 
 *:focus {
     outline: 1px solid #fff;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;               
+}
+*::-webkit-scrollbar-track {
+    background: $dark;        
+}
+*::-webkit-scrollbar-thumb {
+    background-color: $gold;    
+    border-radius: 20px;       
+    border: 3px solid $light;  
+}
+*{
+    scrollbar-width: $dark;
+    scrollbar-color: $light $gold;
 }

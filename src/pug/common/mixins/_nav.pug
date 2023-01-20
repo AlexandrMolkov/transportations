@@ -4,7 +4,7 @@ mixin nav(className, data, idName)
         ul(class=className + '__ul')
             each item in data
                 if item.current
-                    -var liClasses= className + '__li ' + className
+                    -var liClasses= className + '__li '
                     li(class=liClasses)
                         a(class=className + '__link ' + className + '__link_current')(href=item.link)= item.content
                 else

@@ -13,9 +13,9 @@ document.querySelectorAll(`.burg`)
                 document.querySelector(burg.dataset.target).classList.toggle(`show`)
                 if (document.querySelector(burg.dataset.target).classList.contains(`show`))
                 {
-                    document.body.classList.add(`overflow-hidden`)
+                    document.body.classList.add(`lock`)
                 } else{
-                    document.body.classList.remove(`overflow-hidden`)
+                    document.body.classList.remove(`lock`)
                 }
 
                 
